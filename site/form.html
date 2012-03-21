@@ -1,0 +1,48 @@
+<?php
+$page_title = "HTML Forms";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><?php print($page_title) ?></title>
+</head>
+<body>
+
+<?php // Script number 2.1 , form.html
+
+// This script creates a simple HTML form. 
+
+// error handling
+ini_set('display errors',1);  // Let me learn from my mistakes!
+error_reporting(E_ALL|E_STRICT); // Show all possible problems!
+
+?>
+
+<form action="handle_form.php" method="post">
+<fieldset><legend>Enter your information in the form below:</legend>
+
+<p><label>Name:<input type = "text" name="name" size ="20" maxlength="40" /></label></p>
+
+<p><label>Email Address:<input type="text" name="email" size="40" maxlength="60" /></label></p>
+
+<p><label for ="gender">Gender:</label><input type="radio" name="gender" value="M" />Male
+<input type="radio" name="gender" value="F" />Female</p>
+
+<p><label>Age:
+<select name="age">
+<option value ="0-29">Under 30</option>
+<option value="30-60">Between 30 and 60</option>
+<option value="60+">Over 60</option>
+</select></label></p>
+
+<p><label>Comments:<textarea name="comments" rows="3" cols="40"></textarea></label></p>
+
+</fieldset>
+
+<p align ="center"><input type="submit" name="submit" value="Submit My Information" /></p>
+</form>
+
+</body>
+</html>
